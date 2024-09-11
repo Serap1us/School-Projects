@@ -5,8 +5,11 @@ void vertex() {
 }
 
 void fragment() {
-	// Called for every pixel the material is visible on.
-	COLOR = vec4(1.0, 0.0, 0.0, 1.0f);
+	// Animate the background using TIME
+	float red = abs(sin(TIME));
+	
+	// Set color to red component
+	COLOR = vec4(red, 0.0, 0.0, 1.0f);
 }
 
 //void light() {
