@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ri1vawmdxgff"]
+[gd_scene load_steps=6 format=3 uid="uid://ri1vawmdxgff"]
 
 [ext_resource type="Shader" path="res://backgroundShade.gdshader" id="1_t58wu"]
 [ext_resource type="Texture2D" uid="uid://brd113remsy2m" path="res://assets/circle.png" id="2_7jcm3"]
+[ext_resource type="Script" path="res://player.gd" id="2_7ytk5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ph1rg"]
 shader = ExtResource("1_t58wu")
@@ -23,15 +24,20 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Player" type="Node2D" parent="."]
+position = Vector2(0, -100)
+script = ExtResource("2_7ytk5")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="PlayerSprite" type="Sprite2D" parent="Player"]
 position = Vector2(28, 22)
 texture = ExtResource("2_7jcm3")
 
-[node name="Area2D" type="Area2D" parent="Player"]
+[node name="Area2D" type="Area2D" parent="Player/PlayerSprite"]
+position = Vector2(-28, -22)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PlayerSprite/Area2D"]
 position = Vector2(28, 22)
 shape = SubResource("CircleShape2D_21uva")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="body_entered" from="Player/PlayerSprite/Area2D" to="Player" method="_on_area_2d_body_entered"]
