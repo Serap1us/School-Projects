@@ -26,11 +26,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Player" type="Node2D" parent="."]
-position = Vector2(0, -100)
 script = ExtResource("2_ee048")
 
 [node name="PlayerSprite" type="Sprite2D" parent="Player"]
-position = Vector2(28, 22)
+position = Vector2(0, -100)
 texture = ExtResource("3_6hupu")
 
 [node name="Area2D" type="Area2D" parent="Player/PlayerSprite"]
