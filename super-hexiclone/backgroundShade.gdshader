@@ -6,10 +6,14 @@ void vertex() {
 
 void fragment() {
 	// Animate the background using TIME
-	float red = abs(sin(TIME));
+	float red = abs(sin(TIME * 0.5)); //0.5 makes it slow down to .5x speed
+	
+	// Use green and blue overtime as well for other shades of red
+	float green = 0.1 + 0.1 * sin(TIME * 1.5);
+	float blue = 0.05 + 0.05 * cos(TIME * 2.0);
 	
 	// Set color to red component
-	COLOR = vec4(red, 0.0, 0.0, 1.0f);
+	COLOR = vec4(red, green, blue, 1.0f);
 }
 
 //void light() {
