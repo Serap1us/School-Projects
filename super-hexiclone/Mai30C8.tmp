@@ -44,9 +44,7 @@ shape = SubResource("CircleShape2D_21uva")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="SpawnManager" type="Node2D" parent="." node_paths=PackedStringArray("targetNode")]
+[node name="SpawnManager" type="Node2D" parent="."]
 script = ExtResource("5_1f8ba")
-obstacleScene = ExtResource("4_wbb5g")
-targetNode = NodePath("..")
 
 [connection signal="body_entered" from="Player/PlayerSprite/Area2D" to="Player" method="_on_area_2d_body_entered"]
