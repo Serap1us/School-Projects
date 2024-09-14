@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ri1vawmdxgff"]
+[gd_scene load_steps=9 format=3 uid="uid://ri1vawmdxgff"]
 
 [ext_resource type="Shader" path="res://backgroundShade.gdshader" id="1_6swm8"]
 [ext_resource type="Script" path="res://player.gd" id="2_ee048"]
 [ext_resource type="Texture2D" uid="uid://brd113remsy2m" path="res://assets/circle.png" id="3_6hupu"]
+[ext_resource type="Script" path="res://camera2D.gd" id="3_e2x3d"]
 [ext_resource type="PackedScene" uid="uid://dp6wir3gbnm2j" path="res://obstacle.tscn" id="4_wbb5g"]
 [ext_resource type="Script" path="res://spawn_manager.gd" id="5_1f8ba"]
 
@@ -26,7 +27,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Player" type="Node2D" parent="."]
+scale = Vector2(0.748373, 0.79601)
 script = ExtResource("2_ee048")
+moveSpeed = null
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+process_mode = 1
+scale = Vector2(1.01466, 0.977205)
+script = ExtResource("3_e2x3d")
 
 [node name="PlayerSprite" type="Sprite2D" parent="Player"]
 position = Vector2(0, -100)
@@ -40,8 +48,6 @@ position = Vector2(28, 22)
 shape = SubResource("CircleShape2D_21uva")
 
 [node name="Obstacle" parent="." instance=ExtResource("4_wbb5g")]
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="SpawnManager" type="Node2D" parent="." node_paths=PackedStringArray("targetNode")]
 script = ExtResource("5_1f8ba")

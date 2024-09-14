@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd2tklef24v0h"]
+
+[sub_resource type="SystemFont" id="SystemFont_k1y7v"]
+font_names = PackedStringArray("Comic Sans MS", "", "")
+
+[sub_resource type="LabelSettings" id="LabelSettings_pdr1m"]
+line_spacing = 5.0
+font = SubResource("SystemFont_k1y7v")
+font_size = 50
+font_color = Color(1, 1, 0.584314, 1)
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 192.0
+offset_right = 577.0
+offset_bottom = 263.0
+scale = Vector2(2.09347, 3.24631)
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_pdr1m")
