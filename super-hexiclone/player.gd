@@ -10,11 +10,9 @@ func _ready():
 	hitbox.body_entered.connect(_on_body_entered)
 	
 func _on_body_entered(body: Node2D) -> void:
-	#print(body)
-	#get_tree().change_scene_to_file("res://Main.tscn")
-	get_tree().paused = true
-	yield(get_tree().create_timer(1.0), 'timeout')
-	get_tree().change_scene_to_file()
+	print(body)
+	get_tree().change_scene_to_file("res://Main.tscn")
+
 
 func _physics_process(delta: float) -> void:
 	# Write the rotation
