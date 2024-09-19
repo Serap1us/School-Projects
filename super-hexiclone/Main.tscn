@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://ri1vawmdxgff"]
+
+[ext_resource type="Shader" path="res://backgroundShade.gdshader" id="1_6swm8"]
+[ext_resource type="Script" path="res://player.gd" id="2_ee048"]
+[ext_resource type="Texture2D" uid="uid://brd113remsy2m" path="res://assets/circle.png" id="3_6hupu"]
+[ext_resource type="Script" path="res://camera2D.gd" id="3_e2x3d"]
+[ext_resource type="PackedScene" uid="uid://dp6wir3gbnm2j" path="res://obstacle.tscn" id="4_wbb5g"]
+[ext_resource type="Script" path="res://spawn_manager.gd" id="5_1f8ba"]
+[ext_resource type="PackedScene" uid="uid://dnds6j8or3ki0" path="res://score.tscn" id="7_7gnv3"]
+[ext_resource type="AudioStream" uid="uid://cuil6urpxpi1" path="res://sfx/hexaclone_bgm.wav" id="8_fbqeg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ph1rg"]
+shader = ExtResource("1_6swm8")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_21uva"]
+radius = 15.0333
+
+[node name="Main" type="Node2D"]
+
+[node name="Background Layer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="Background Layer"]
+material = SubResource("ShaderMaterial_ph1rg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player" type="Node2D" parent="."]
+scale = Vector2(0.748373, 0.79601)
+script = ExtResource("2_ee048")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+process_mode = 1
+scale = Vector2(1.01466, 0.977205)
+script = ExtResource("3_e2x3d")
+
+[node name="PlayerSprite" type="Sprite2D" parent="Player"]
+position = Vector2(0, -100)
+texture = ExtResource("3_6hupu")
+
+[node name="Area2D" type="Area2D" parent="Player/PlayerSprite"]
+position = Vector2(-28, -22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PlayerSprite/Area2D"]
+position = Vector2(28, 22)
+shape = SubResource("CircleShape2D_21uva")
+
+[node name="Obstacle" parent="." instance=ExtResource("4_wbb5g")]
+
+[node name="SpawnManager" type="Node2D" parent="." node_paths=PackedStringArray("targetNode")]
+script = ExtResource("5_1f8ba")
+obstacleScene = ExtResource("4_wbb5g")
+targetNode = NodePath("..")
+
+[node name="Score" parent="." instance=ExtResource("7_7gnv3")]
+offset_left = -20.0
+offset_top = -191.0
+offset_right = 28.0
+offset_bottom = -168.0
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_fbqeg")
+autoplay = true
+
+[connection signal="body_entered" from="Player/PlayerSprite/Area2D" to="Player" method="_on_area_2d_body_entered"]

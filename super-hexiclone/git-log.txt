@@ -1,0 +1,72 @@
+commit be5618d8b98549e1a48b06248bd78b50bb111747
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Tue Sep 10 23:14:55 2024 -0600
+
+    Fixed offset
+    
+    player is now centred properly
+
+commit 059baa84128eb2657df0219fcd0dc28a6fff4a5e
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Tue Sep 10 22:31:58 2024 -0600
+
+    Game Finished
+    
+    - player now collides with obstacle and game restarts
+
+commit 5b2d948af384ed1cf60591c5a1b39906794d0eab
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Tue Sep 10 22:21:19 2024 -0600
+
+    Implemented Obstacle
+    
+    - obstacle deletes at a rate of 10f
+    - obstacle sized properly with collision
+
+commit 963b8888d92e149feed97cb1c9830f796c26b2d7
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Tue Sep 10 22:05:58 2024 -0600
+
+    Player Rotation
+    
+    - player can rotate left and right
+    - you can also use AD to rotate left and right instead of LR-Arrow Keys
+
+commit 7698889437cf5c51a8515c19874f263cdfee6690
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Tue Sep 10 21:52:47 2024 -0600
+
+    Implemented Player
+    
+    - player has collision shape
+    - player has circle.png as sprite
+
+commit 0267de1bf082844a50fe89c259f97f7ddc7a205d
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Tue Sep 10 21:45:25 2024 -0600
+
+    Animated Background 2
+    
+    background animation now animates with different shades using green and blue components
+
+commit 61cc1d821a6c7664cde29d1835dcefef732b5beb
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Tue Sep 10 21:40:56 2024 -0600
+
+    Animated Background
+    
+    background oscillates over time using a sin wave
+
+commit a25babecd1d22bdc7cc6bc69c81f812795eeca83
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Tue Sep 10 21:37:10 2024 -0600
+
+    Created background shader
+    
+    background now turns red
+
+commit 153f389116b340282146a79b79410e9dbb0fd9c2
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Tue Sep 10 21:25:05 2024 -0600
+
+    Initial commit

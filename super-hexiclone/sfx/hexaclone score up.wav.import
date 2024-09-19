@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://mvygx5w84tpt"
+path="res://.godot/imported/hexaclone score up.wav-1d2073ffb6082f2ca9e948f4d7fd16cd.sample"
+
+[deps]
+
+source_file="res://sfx/hexaclone score up.wav"
+dest_files=["res://.godot/imported/hexaclone score up.wav-1d2073ffb6082f2ca9e948f4d7fd16cd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

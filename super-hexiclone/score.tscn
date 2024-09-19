@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnds6j8or3ki0"]
+
+[ext_resource type="Script" path="res://score.gd" id="1_t2qbb"]
+[ext_resource type="AudioStream" uid="uid://mvygx5w84tpt" path="res://sfx/hexaclone score up.wav" id="2_msa8v"]
+
+[sub_resource type="SystemFont" id="SystemFont_wh3de"]
+font_names = PackedStringArray("Crispy Tofu")
+
+[sub_resource type="LabelSettings" id="LabelSettings_6bi1k"]
+font = SubResource("SystemFont_wh3de")
+font_size = 60
+
+[node name="Score" type="Label"]
+offset_top = -1.0
+offset_right = 57.0
+offset_bottom = 136.0
+text = "0"
+label_settings = SubResource("LabelSettings_6bi1k")
+script = ExtResource("1_t2qbb")
+
+[node name="scoreSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_msa8v")
