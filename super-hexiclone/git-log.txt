@@ -1,3 +1,44 @@
+commit c927508ae0bcbd95267741a0f6756e92be01b9cc
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Wed Sep 18 18:39:56 2024 -0600
+
+    cameraShake
+    
+    attempted to make cameraShake
+
+commit f93fd9465ae7db222249c21b73a02294de15272e
+Merge: 79b44af a69f991
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Wed Sep 18 18:24:19 2024 -0600
+
+    Merge branch 'super-hexiclone'
+
+commit 79b44afda5092ff363f1cf8f849e18824e6cfd99
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Wed Sep 18 18:23:50 2024 -0600
+
+    Implemented SFX
+    
+    - added background music
+    - added a scoreUp sound effect
+
+commit a69f99105a01f8b223be356b0f9e1baad12503dc
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Fri Sep 13 21:15:53 2024 -0600
+
+    Removed Gameover
+    
+    - removed gameover scene
+
+commit 14ee64b51692a13e6431bba281c87955a6817b07
+Author: Serap1us <markmandac07@gmail.com>
+Date:   Fri Sep 13 21:11:57 2024 -0600
+
+    Fixed up spawner, and added gameover
+    
+    - spawner now spawns at a better rate spawning ahead
+    - gameover scene
+
 commit be5618d8b98549e1a48b06248bd78b50bb111747
 Author: Serap1us <markmandac07@gmail.com>
 Date:   Tue Sep 10 23:14:55 2024 -0600
