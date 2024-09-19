@@ -5,6 +5,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_wh3de"]
 font_names = PackedStringArray("Crispy Tofu")
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_6bi1k"]
 font = SubResource("SystemFont_wh3de")
